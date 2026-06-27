@@ -4,13 +4,13 @@
 
 This project implements an **Automatic License Plate Recognition (ALPR)** system using **Computer Vision** and **Optical Character Recognition (OCR)** techniques.
 
-The system detects a vehicle's license plate from an image, extracts the plate region, and recognizes the text using EasyOCR.
+The system detects a vehicle's license plate from an image, extracts the plate region, and recognizes the plate number using **EasyOCR**.
 
 ---
 
 ## 🎯 Objective
 
-The main objective of this project is to automatically detect and recognize vehicle license plate numbers from images using image processing and OCR techniques.
+The main objective of this project is to automatically detect and recognize vehicle license plates from images using OpenCV and OCR techniques.
 
 ---
 
@@ -20,10 +20,10 @@ The main objective of this project is to automatically detect and recognize vehi
 2. Convert the image to grayscale.
 3. Apply bilateral filtering for noise reduction.
 4. Detect edges using the Canny Edge Detector.
-5. Find contours and identify the license plate.
+5. Find contours and locate the license plate.
 6. Crop the detected license plate.
-7. Extract text using EasyOCR.
-8. Display the detected plate with the recognized text.
+7. Recognize the plate text using EasyOCR.
+8. Display the detected plate and the recognized text.
 
 ---
 
@@ -31,21 +31,25 @@ The main objective of this project is to automatically detect and recognize vehi
 
 ### Original Vehicle Images
 
-![Car 1](car1.png)
+#### Vehicle Image 1
 
-![Car 2](car2.png)
+![Car 1](images/car1.png.jpeg)
+
+#### Vehicle Image 2
+
+![Car 2](images/car2.png.jpeg)
 
 ---
 
 ### License Plate Detection
 
-![Detection Result](detection_result.png)
+![Detection Result](images/detection_result.png.jpg)
 
 ---
 
-### Final OCR Result
+### OCR Result
 
-![OCR Result](ocr_result.png)
+![OCR Result](images/ocr_result.png.jpg)
 
 The system successfully detects the vehicle's license plate and recognizes the license number using EasyOCR.
 
@@ -53,12 +57,12 @@ The system successfully detects the vehicle's license plate and recognizes the l
 
 ## 🛠️ Technologies Used
 
-* Python
-* OpenCV
-* EasyOCR
-* NumPy
-* Matplotlib
-* Imutils
+- Python
+- OpenCV
+- EasyOCR
+- NumPy
+- Matplotlib
+- Imutils
 
 ---
 
@@ -76,24 +80,30 @@ pip install numpy
 
 ## ▶️ How to Run
 
-1. Clone the repository.
-2. Install the required libraries.
-3. Open the notebook.
-4. Run all cells.
-5. Replace the input image with your own vehicle image to test the model.
+```bash
+git clone https://github.com/Meriam-aziz/Vehicle-License-Plate-Recognition-using-OCR.git
+
+cd Vehicle-License-Plate-Recognition-using-OCR
+
+pip install -r requirements.txt
+
+jupyter notebook OCR.ipynb
+```
 
 ---
 
 ## 📁 Project Structure
 
 ```text
-Automatic-License-Plate-Recognition/
+Vehicle-License-Plate-Recognition-using-OCR/
+│
+├── images/
+│   ├── car1.png.jpeg
+│   ├── car2.png.jpeg
+│   ├── detection_result.png.jpg
+│   └── ocr_result.png.jpg
 │
 ├── OCR.ipynb
-├── car1.png
-├── car2.png
-├── detection_result.png
-├── ocr_result.png
 ├── README.md
 └── requirements.txt
 ```
@@ -102,11 +112,11 @@ Automatic-License-Plate-Recognition/
 
 ## 🚀 Features
 
-* Vehicle license plate detection.
-* Image preprocessing using OpenCV.
-* Automatic text extraction using EasyOCR.
-* Supports different vehicle images.
-* Simple and efficient Computer Vision pipeline.
+- Automatic vehicle license plate detection.
+- Image preprocessing using OpenCV.
+- Text extraction using EasyOCR.
+- Fast and accurate OCR pipeline.
+- Works with different vehicle images.
 
 ---
 
@@ -118,8 +128,8 @@ Automatic-License-Plate-Recognition/
 
 ## ⭐ Future Improvements
 
-* Process video streams in real time.
-* Improve detection accuracy under different lighting conditions.
-* Support multiple license plates in a single image.
-* Build a web application using Streamlit or Flask.
+- Support real-time video processing.
+- Improve detection accuracy under different lighting conditions.
+- Detect multiple license plates in one image.
+- Deploy the project as a web application using Streamlit or Flask.
 
